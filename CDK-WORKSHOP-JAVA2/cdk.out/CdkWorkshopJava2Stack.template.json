@@ -122,6 +122,53 @@
     "aws:cdk:path": "CdkWorkshopJava2Stack/HelloHitCounter/HitCounterHandler/ServiceRole/Resource"
    }
   },
+  "HelloHitCounterHitCounterHandlerServiceRoleDefaultPolicy1487A60A": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:ConditionCheckItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:DescribeTable",
+        "dynamodb:GetItem",
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator",
+        "dynamodb:PutItem",
+        "dynamodb:Query",
+        "dynamodb:Scan",
+        "dynamodb:UpdateItem"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "HelloHitCounterHits7AAEBF80",
+          "Arn"
+         ]
+        },
+        {
+         "Ref": "AWS::NoValue"
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "HelloHitCounterHitCounterHandlerServiceRoleDefaultPolicy1487A60A",
+    "Roles": [
+     {
+      "Ref": "HelloHitCounterHitCounterHandlerServiceRoleD45002B8"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/HelloHitCounter/HitCounterHandler/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
   "HelloHitCounterHitCounterHandlerDAEA7B37": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
@@ -151,6 +198,7 @@
     "Runtime": "nodejs14.x"
    },
    "DependsOn": [
+    "HelloHitCounterHitCounterHandlerServiceRoleDefaultPolicy1487A60A",
     "HelloHitCounterHitCounterHandlerServiceRoleD45002B8"
    ],
    "Metadata": {
@@ -479,7 +527,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1WQwU7DMAyGn2X3NIxx4rgNcUAgpsJ9chPTmTZJ1TiMqsq7k6QDjZM//7Z/W97I+7Vcr+DsK6W7qqdGzm8MqhNJOs49mEaDnB+DVUzOiv2HveYDjoa8T1kUBEbOtesxF3KMwt8dwXtkL7c5pFzuguqQd+BR6MmCcTptfIdmGSsQBQzUAuMZJjk/lxNq9LwdqFhf8AGH3k0GLWf1Kkv3t8VtgdTvwqiw7DyM7nv6VS5uC78gn5zO0kIx/k2Kcn12I9vmjtfAQ+B/44n3zmri8osn+IKbTfqsvF19eqJqDJbJoKyX+AMmaHCsdwEAAA=="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1WQwU7DMAyGn2X3NIztxHEb4oBAqwr3yU1MZ9okVeMwqqrvTpIONE7+/Mf+7XgjH9ZyvYKLL5Rui45qOb0xqFZE6TR1YGoNcnoKVjE5Kw4f9pZLHAx5H7NZEBg5Va7D9JBj6TpSY67LNAu/PYH3yF7uUoi53AfVIu/Bo9CjBeN0XOEd6sUnwyygpwYYLzDK6SXvVKHnXU951hUfse/caNByUm+y+KEmuy0Q610YFOaZ5eC+x1/l6rbwK/LZ6SQtNM9/nSJvn9zINqniGLgP/K898sFZTZyP8wxfcLeJp5b3q09PVAzBMhmU1RJ/AEFOIHeIAQAA"
    },
    "Metadata": {
     "aws:cdk:path": "CdkWorkshopJava2Stack/CDKMetadata/Default"
