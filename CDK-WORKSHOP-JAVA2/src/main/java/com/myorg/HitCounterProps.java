@@ -27,7 +27,7 @@ public interface HitCounterProps {
                 public IFunction getDownstream() {
                     return downstream;
                 }
-            }
+            };
         }
     }
 }
