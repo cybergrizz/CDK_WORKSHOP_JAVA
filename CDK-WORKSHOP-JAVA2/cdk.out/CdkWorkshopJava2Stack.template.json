@@ -41,7 +41,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "7aec45524817cfd813f15c5cd67286eacd665b0f0c81aa220f7e69ff942d55a7.zip"
+     "S3Key": "834d53b5a311cecef70538dfefd23e1b8bde50f50e84e8d35a37ee97d639edc5.zip"
     },
     "Handler": "hello.handler",
     "Role": {
@@ -57,7 +57,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "CdkWorkshopJava2Stack/HelloHandler/Resource",
-    "aws:asset:path": "asset.7aec45524817cfd813f15c5cd67286eacd665b0f0c81aa220f7e69ff942d55a7",
+    "aws:asset:path": "asset.834d53b5a311cecef70538dfefd23e1b8bde50f50e84e8d35a37ee97d639edc5",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -202,7 +202,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "7aec45524817cfd813f15c5cd67286eacd665b0f0c81aa220f7e69ff942d55a7.zip"
+     "S3Key": "834d53b5a311cecef70538dfefd23e1b8bde50f50e84e8d35a37ee97d639edc5.zip"
     },
     "Environment": {
      "Variables": {
@@ -229,7 +229,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "CdkWorkshopJava2Stack/HelloHitCounter/HitCounterHandler/Resource",
-    "aws:asset:path": "asset.7aec45524817cfd813f15c5cd67286eacd665b0f0c81aa220f7e69ff942d55a7",
+    "aws:asset:path": "asset.834d53b5a311cecef70538dfefd23e1b8bde50f50e84e8d35a37ee97d639edc5",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
