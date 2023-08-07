@@ -6,7 +6,7 @@ import software.amazon.awscdk.StackProps;
 
 import software.amazon.awscdk.services.lambda.Code;
 import software.amazon.awscdk.services.lambda.Function;
-import software.amazon.awscdk.lambda.Runtime;
+import software.amazon.awscdk.services.lambda.Runtime;
 
 public class CdkWorkshopJava2Stack extends Stack {
     public CdkWorkshopJava2Stack(final Construct parent, final String id) {
