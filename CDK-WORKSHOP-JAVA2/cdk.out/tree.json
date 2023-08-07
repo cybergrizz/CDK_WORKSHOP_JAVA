@@ -8,6 +8,126 @@
         "id": "CdkWorkshopJava2Stack",
         "path": "CdkWorkshopJava2Stack",
         "children": {
+          "HelloHandler": {
+            "id": "HelloHandler",
+            "path": "CdkWorkshopJava2Stack/HelloHandler",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "CdkWorkshopJava2Stack/HelloHandler/ServiceRole",
+                "children": {
+                  "ImportServiceRole": {
+                    "id": "ImportServiceRole",
+                    "path": "CdkWorkshopJava2Stack/HelloHandler/ServiceRole/ImportServiceRole",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.Resource",
+                      "version": "2.90.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "CdkWorkshopJava2Stack/HelloHandler/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                      "version": "2.90.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Role",
+                  "version": "2.90.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "CdkWorkshopJava2Stack/HelloHandler/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "CdkWorkshopJava2Stack/HelloHandler/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.90.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "CdkWorkshopJava2Stack/HelloHandler/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.90.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.90.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "CdkWorkshopJava2Stack/HelloHandler/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+                      },
+                      "s3Key": "f38608d1a64eee8be098d7a8652d45cf6ac6d4f90215c35c30aca959dfe08436.zip"
+                    },
+                    "handler": "hello.handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "HelloHandlerServiceRole11EF7C63",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "nodejs14.x"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                  "version": "2.90.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_lambda.Function",
+              "version": "2.90.0"
+            }
+          },
           "CDKMetadata": {
             "id": "CDKMetadata",
             "path": "CdkWorkshopJava2Stack/CDKMetadata",

@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a79251583bd1686c2e2c1c62b3fbb75b1bf9ef9ad7024fd54d4b325cb5dba3d9.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a1483cd67572322a20cdc6da6071fa2d4de9167a41df60fd6c8e9e439019f899.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -33,6 +33,18 @@
         "CdkWorkshopJava2Stack.assets"
       ],
       "metadata": {
+        "/CdkWorkshopJava2Stack/HelloHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandlerServiceRole11EF7C63"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/HelloHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHandler2E4FBA4D"
+          }
+        ],
         "/CdkWorkshopJava2Stack/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
