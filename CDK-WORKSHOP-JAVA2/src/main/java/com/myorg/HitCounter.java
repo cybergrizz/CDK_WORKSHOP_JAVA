@@ -46,7 +46,7 @@ public class HitCounter extends Construct {
         return this.handler;
     }
 
-    public Table gerTable() {
+    public Table getTable() {
         return this.table;
     }
 }
