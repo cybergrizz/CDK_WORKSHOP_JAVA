@@ -1,20 +1,20 @@
 {
   "version": "33.0.0",
   "files": {
-    "f38608d1a64eee8be098d7a8652d45cf6ac6d4f90215c35c30aca959dfe08436": {
+    "14797f259f0b66e83c90fbc66f3cd4f466b9498c92dfc555ef80f327754121b2": {
       "source": {
-        "path": "asset.f38608d1a64eee8be098d7a8652d45cf6ac6d4f90215c35c30aca959dfe08436",
+        "path": "asset.14797f259f0b66e83c90fbc66f3cd4f466b9498c92dfc555ef80f327754121b2",
         "packaging": "zip"
       },
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "f38608d1a64eee8be098d7a8652d45cf6ac6d4f90215c35c30aca959dfe08436.zip",
+          "objectKey": "14797f259f0b66e83c90fbc66f3cd4f466b9498c92dfc555ef80f327754121b2.zip",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }
     },
-    "a1483cd67572322a20cdc6da6071fa2d4de9167a41df60fd6c8e9e439019f899": {
+    "0345163e5b75662c89d661e5840353c9408421a2008a05f95611ea89a0534483": {
       "source": {
         "path": "CdkWorkshopJava2Stack.template.json",
         "packaging": "file"
@@ -22,7 +22,7 @@
       "destinations": {
         "current_account-current_region": {
           "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
-          "objectKey": "a1483cd67572322a20cdc6da6071fa2d4de9167a41df60fd6c8e9e439019f899.json",
+          "objectKey": "0345163e5b75662c89d661e5840353c9408421a2008a05f95611ea89a0534483.json",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
         }
       }
