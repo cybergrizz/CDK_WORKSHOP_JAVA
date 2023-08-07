@@ -19,7 +19,7 @@ public interface HitCounterProps {
 
         public HitCounterProps build() {
             if(this.downstream == null) {
-                throw new NullPointerException("The downstream property is required!")
+                throw new NullPointerException("The downstream property is required!");
             }
 
             return new HitCounterProps() {

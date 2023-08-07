@@ -35,7 +35,7 @@ public class HitCounter extends Construct {
             .handler("hitcounter.handler")
             .code(Code.fromAsset("lambda"))
             .environment(environment)
-            .build()
+            .build();
     }
 
     public Function getHandler() {
