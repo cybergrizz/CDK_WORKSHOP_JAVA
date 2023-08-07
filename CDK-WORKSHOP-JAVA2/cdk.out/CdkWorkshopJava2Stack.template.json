@@ -50,7 +50,7 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs14.x"
+    "Runtime": "nodejs18.x"
    },
    "DependsOn": [
     "HelloHandlerServiceRole11EF7C63"
@@ -221,7 +221,7 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs14.x"
+    "Runtime": "nodejs18.x"
    },
    "DependsOn": [
     "HelloHitCounterHitCounterHandlerServiceRoleDefaultPolicy1487A60A",

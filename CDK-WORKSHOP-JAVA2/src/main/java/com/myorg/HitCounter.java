@@ -3,8 +3,9 @@ package com.myorg;
 import java.util.HashMap;
 import java.util.Map;
 
+import software.amazon.awscdk.RemovalPolicy;
 import software.constructs.Construct;
-
+import software.amazon.awscdk.RemovalPolicy;
 import software.amazon.awscdk.services.dynamodb.Attribute;
 import software.amazon.awscdk.services.dynamodb.AttributeType;
 import software.amazon.awscdk.services.dynamodb.Table;
@@ -24,6 +25,7 @@ public class HitCounter extends Construct {
                 .name("path")
                 .type(AttributeType.STRING)
                 .build())
+            .removalPolicy(RemovalPolicy.DESTROY)
             .build();
         
         final Map<String, String> environment = new HashMap<>();
