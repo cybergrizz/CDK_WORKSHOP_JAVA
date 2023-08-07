@@ -18,14 +18,18 @@ public class CdkWorkshopJava2Stack extends Stack {
         super(parent, id, props);
 
         final Function hello = Function.Builder.create(this, "HelloHandler")
-        .runtime(Runtime.NODEJS_14_X)
-        .code(Code.fromAsset("lambda"))
-        .handler("hello.handler")
-        .build();
+            .runtime(Runtime.NODEJS_14_X)
+            .code(Code.fromAsset("lambda"))
+            .handler("hello.handler")
+            .build();
+
+        final HitCounter helloWithCounter = new HitCounter(this, "HelloHitCounter", HitCounterProps.builder()
+            .downstream(hello)
+            .build());
 
         LambdaRestApi.Builder.create(this, "Endpoint")
-        .handler(hello)
-        .build();
+            .handler(hello)
+            .build();
 
     }
 }
