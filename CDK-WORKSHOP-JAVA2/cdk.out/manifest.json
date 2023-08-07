@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fbb8b311144fc2b5b432ce06a8f14ec31c594b9ea11ea27554c96503aa896281.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a79251583bd1686c2e2c1c62b3fbb75b1bf9ef9ad7024fd54d4b325cb5dba3d9.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -33,30 +33,6 @@
         "CdkWorkshopJava2Stack.assets"
       ],
       "metadata": {
-        "/CdkWorkshopJava2Stack/CdkWorkshopJava2Queue/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CdkWorkshopJava2QueueFC516D56"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/CdkWorkshopJava2Queue/Policy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CdkWorkshopJava2QueuePolicy0D0F8506"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/CdkWorkshopJava2Queue/CdkWorkshopJava2StackCdkWorkshopJava2Topic2F7514C7/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CdkWorkshopJava2QueueCdkWorkshopJava2StackCdkWorkshopJava2Topic2F7514C7B97E72B1"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/CdkWorkshopJava2Topic/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "CdkWorkshopJava2Topic2443A115"
-          }
-        ],
         "/CdkWorkshopJava2Stack/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
