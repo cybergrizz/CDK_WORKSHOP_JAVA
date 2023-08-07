@@ -20,7 +20,7 @@ public class CdkWorkshopJava2Stack extends Stack {
         .runtime(Runtime.NODEJS_14_X)
         .code(Code.fromAsset("lambda"))
         .handler("hello.handler")
-        .build()
+        .build();
 
     }
 }
