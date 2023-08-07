@@ -38,6 +38,8 @@ public class HitCounter extends Construct {
             .build();
 
         this.table.grantReadWriteData(this.handler);
+
+        props.getDownstream().grantInvoke(this.handler);
     }
 
     public Function getHandler() {
