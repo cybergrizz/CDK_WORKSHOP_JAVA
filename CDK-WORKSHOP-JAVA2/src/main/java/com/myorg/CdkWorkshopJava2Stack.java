@@ -20,7 +20,7 @@ public class CdkWorkshopJava2Stack extends Stack {
         super(parent, id, props);
 
         final Function hello = Function.Builder.create(this, "HelloHandler")
-            .runtime(Runtime.NODEJS_14_X)
+            .runtime(Runtime.NODEJS_18_X)
             .code(Code.fromAsset("lambda"))
             .handler("hello.handler")
             .build();

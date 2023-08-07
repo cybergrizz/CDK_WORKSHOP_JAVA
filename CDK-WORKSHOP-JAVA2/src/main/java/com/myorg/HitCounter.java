@@ -31,7 +31,7 @@ public class HitCounter extends Construct {
         environment.put("HITS_TABLE_NAME", this.table.getTableName());
 
         this.handler = Function.Builder.create(this, "HitCounterHandler")
-            .runtime(Runtime.NODEJS_14_X)
+            .runtime(Runtime.NODEJS_18_X)
             .handler("hitcounter.handler")
             .code(Code.fromAsset("lambda"))
             .environment(environment)
