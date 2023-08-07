@@ -1,0 +1,19 @@
+{
+  "version": "33.0.0",
+  "files": {
+    "fbb8b311144fc2b5b432ce06a8f14ec31c594b9ea11ea27554c96503aa896281": {
+      "source": {
+        "path": "CdkWorkshopJava2Stack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "fbb8b311144fc2b5b432ce06a8f14ec31c594b9ea11ea27554c96503aa896281.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

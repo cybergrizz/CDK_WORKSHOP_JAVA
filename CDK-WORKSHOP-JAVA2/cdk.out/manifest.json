@@ -1,0 +1,94 @@
+{
+  "version": "33.0.0",
+  "artifacts": {
+    "CdkWorkshopJava2Stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CdkWorkshopJava2Stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CdkWorkshopJava2Stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkWorkshopJava2Stack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fbb8b311144fc2b5b432ce06a8f14ec31c594b9ea11ea27554c96503aa896281.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CdkWorkshopJava2Stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CdkWorkshopJava2Stack.assets"
+      ],
+      "metadata": {
+        "/CdkWorkshopJava2Stack/CdkWorkshopJava2Queue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkWorkshopJava2QueueFC516D56"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/CdkWorkshopJava2Queue/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkWorkshopJava2QueuePolicy0D0F8506"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/CdkWorkshopJava2Queue/CdkWorkshopJava2StackCdkWorkshopJava2Topic2F7514C7/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkWorkshopJava2QueueCdkWorkshopJava2StackCdkWorkshopJava2Topic2F7514C7B97E72B1"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/CdkWorkshopJava2Topic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CdkWorkshopJava2Topic2443A115"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CdkWorkshopJava2Stack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
