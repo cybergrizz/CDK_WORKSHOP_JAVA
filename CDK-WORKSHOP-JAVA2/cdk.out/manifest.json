@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/96c35e3be99eb8372b4c713da3a3278e74e5beaefb7b9e3353c0f72804674f36.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3df3889dc857a43f522a16a3f3c39ef1dc2ced46074cff59b8ab44b70c1d3045.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -43,6 +43,24 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "HelloHandler2E4FBA4D"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/HelloHitCounter/Hits/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHits7AAEBF80"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/HelloHitCounter/HitCounterHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerServiceRoleD45002B8"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/HelloHitCounter/HitCounterHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloHitCounterHitCounterHandlerDAEA7B37"
           }
         ],
         "/CdkWorkshopJava2Stack/Endpoint/Resource": [

@@ -36,6 +36,8 @@ public class HitCounter extends Construct {
             .code(Code.fromAsset("lambda"))
             .environment(environment)
             .build();
+
+        this.table.grantReadWriteData(this.handler);
     }
 
     public Function getHandler() {
