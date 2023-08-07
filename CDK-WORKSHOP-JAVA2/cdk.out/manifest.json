@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c946909e7b1c965bae62e77a0656bd596d1aa0cb34dedda204650c270435d8be.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/96c35e3be99eb8372b4c713da3a3278e74e5beaefb7b9e3353c0f72804674f36.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -43,6 +43,72 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "HelloHandler2E4FBA4D"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointEEF1FD8F"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointDeployment318525DAc22ba219fc5b08a66639f7b550b15cef"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointDeploymentStageprodB78BEEA0"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Endpoint8024A810"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Endpointproxy39E2174E"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Default/{proxy+}/ANY/ApiPermission.CdkWorkshopJava2StackEndpoint076B600F.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYApiPermissionCdkWorkshopJava2StackEndpoint076B600FANYproxy5815DFBB"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Default/{proxy+}/ANY/ApiPermission.Test.CdkWorkshopJava2StackEndpoint076B600F.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYApiPermissionTestCdkWorkshopJava2StackEndpoint076B600FANYproxy2DA0120C"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointproxyANYC09721C5"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Default/ANY/ApiPermission.CdkWorkshopJava2StackEndpoint076B600F.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANYApiPermissionCdkWorkshopJava2StackEndpoint076B600FANYB5E02CE4"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Default/ANY/ApiPermission.Test.CdkWorkshopJava2StackEndpoint076B600F.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANYApiPermissionTestCdkWorkshopJava2StackEndpoint076B600FANY80D064E6"
+          }
+        ],
+        "/CdkWorkshopJava2Stack/Endpoint/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointANY485C938B"
           }
         ],
         "/CdkWorkshopJava2Stack/CDKMetadata/Default": [

@@ -62,15 +62,359 @@
     "aws:asset:property": "Code"
    }
   },
+  "EndpointEEF1FD8F": {
+   "Type": "AWS::ApiGateway::RestApi",
+   "Properties": {
+    "Name": "Endpoint"
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Resource"
+   }
+  },
+  "EndpointDeployment318525DAc22ba219fc5b08a66639f7b550b15cef": {
+   "Type": "AWS::ApiGateway::Deployment",
+   "Properties": {
+    "Description": "Automatically created by the RestApi construct",
+    "RestApiId": {
+     "Ref": "EndpointEEF1FD8F"
+    }
+   },
+   "DependsOn": [
+    "EndpointproxyANYC09721C5",
+    "Endpointproxy39E2174E",
+    "EndpointANY485C938B"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Deployment/Resource"
+   }
+  },
+  "EndpointDeploymentStageprodB78BEEA0": {
+   "Type": "AWS::ApiGateway::Stage",
+   "Properties": {
+    "DeploymentId": {
+     "Ref": "EndpointDeployment318525DAc22ba219fc5b08a66639f7b550b15cef"
+    },
+    "RestApiId": {
+     "Ref": "EndpointEEF1FD8F"
+    },
+    "StageName": "prod"
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/DeploymentStage.prod/Resource"
+   }
+  },
+  "Endpointproxy39E2174E": {
+   "Type": "AWS::ApiGateway::Resource",
+   "Properties": {
+    "ParentId": {
+     "Fn::GetAtt": [
+      "EndpointEEF1FD8F",
+      "RootResourceId"
+     ]
+    },
+    "PathPart": "{proxy+}",
+    "RestApiId": {
+     "Ref": "EndpointEEF1FD8F"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Default/{proxy+}/Resource"
+   }
+  },
+  "EndpointproxyANYApiPermissionCdkWorkshopJava2StackEndpoint076B600FANYproxy5815DFBB": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "HelloHandler2E4FBA4D",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:",
+       {
+        "Ref": "AWS::Region"
+       },
+       ":",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":",
+       {
+        "Ref": "EndpointEEF1FD8F"
+       },
+       "/",
+       {
+        "Ref": "EndpointDeploymentStageprodB78BEEA0"
+       },
+       "/*/*"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Default/{proxy+}/ANY/ApiPermission.CdkWorkshopJava2StackEndpoint076B600F.ANY..{proxy+}"
+   }
+  },
+  "EndpointproxyANYApiPermissionTestCdkWorkshopJava2StackEndpoint076B600FANYproxy2DA0120C": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "HelloHandler2E4FBA4D",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:",
+       {
+        "Ref": "AWS::Region"
+       },
+       ":",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":",
+       {
+        "Ref": "EndpointEEF1FD8F"
+       },
+       "/test-invoke-stage/*/*"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Default/{proxy+}/ANY/ApiPermission.Test.CdkWorkshopJava2StackEndpoint076B600F.ANY..{proxy+}"
+   }
+  },
+  "EndpointproxyANYC09721C5": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "AuthorizationType": "NONE",
+    "HttpMethod": "ANY",
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:",
+        {
+         "Ref": "AWS::Region"
+        },
+        ":lambda:path/2015-03-31/functions/",
+        {
+         "Fn::GetAtt": [
+          "HelloHandler2E4FBA4D",
+          "Arn"
+         ]
+        },
+        "/invocations"
+       ]
+      ]
+     }
+    },
+    "ResourceId": {
+     "Ref": "Endpointproxy39E2174E"
+    },
+    "RestApiId": {
+     "Ref": "EndpointEEF1FD8F"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Default/{proxy+}/ANY/Resource"
+   }
+  },
+  "EndpointANYApiPermissionCdkWorkshopJava2StackEndpoint076B600FANYB5E02CE4": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "HelloHandler2E4FBA4D",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:",
+       {
+        "Ref": "AWS::Region"
+       },
+       ":",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":",
+       {
+        "Ref": "EndpointEEF1FD8F"
+       },
+       "/",
+       {
+        "Ref": "EndpointDeploymentStageprodB78BEEA0"
+       },
+       "/*/"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Default/ANY/ApiPermission.CdkWorkshopJava2StackEndpoint076B600F.ANY.."
+   }
+  },
+  "EndpointANYApiPermissionTestCdkWorkshopJava2StackEndpoint076B600FANY80D064E6": {
+   "Type": "AWS::Lambda::Permission",
+   "Properties": {
+    "Action": "lambda:InvokeFunction",
+    "FunctionName": {
+     "Fn::GetAtt": [
+      "HelloHandler2E4FBA4D",
+      "Arn"
+     ]
+    },
+    "Principal": "apigateway.amazonaws.com",
+    "SourceArn": {
+     "Fn::Join": [
+      "",
+      [
+       "arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":execute-api:",
+       {
+        "Ref": "AWS::Region"
+       },
+       ":",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":",
+       {
+        "Ref": "EndpointEEF1FD8F"
+       },
+       "/test-invoke-stage/*/"
+      ]
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Default/ANY/ApiPermission.Test.CdkWorkshopJava2StackEndpoint076B600F.ANY.."
+   }
+  },
+  "EndpointANY485C938B": {
+   "Type": "AWS::ApiGateway::Method",
+   "Properties": {
+    "AuthorizationType": "NONE",
+    "HttpMethod": "ANY",
+    "Integration": {
+     "IntegrationHttpMethod": "POST",
+     "Type": "AWS_PROXY",
+     "Uri": {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":apigateway:",
+        {
+         "Ref": "AWS::Region"
+        },
+        ":lambda:path/2015-03-31/functions/",
+        {
+         "Fn::GetAtt": [
+          "HelloHandler2E4FBA4D",
+          "Arn"
+         ]
+        },
+        "/invocations"
+       ]
+      ]
+     }
+    },
+    "ResourceId": {
+     "Fn::GetAtt": [
+      "EndpointEEF1FD8F",
+      "RootResourceId"
+     ]
+    },
+    "RestApiId": {
+     "Ref": "EndpointEEF1FD8F"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Default/ANY/Resource"
+   }
+  },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zWOsQ6DMAxEv4U9uJROHQtSh47hA5BJUuQCiYSTdoj49yYgpjvfk3VXw72CqsAfl0pP5UwDxM6jmkSK+jjjMmiE+AxWeXJWtG97+k0QLhClm02Os26Cbz0yG8/wyJJuaIKajG+QE5aGXViVETtNRSPZcf8+QfKts5qOhhd+8VKnhXAtPkxUrsF6WgzIQ/9KOL1ZvwAAAA=="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1VQzU7DMAx+lt3TMMaJ4zbEAYGYygNMXmqKaZNUtcOoor47STrQOH0/sT/b2ej7tV6v4MyVabqqp5OObwKmU8k6xh7sqQEdH4MzQt6p/bu75gccLTEnNSsCq2Pte8wPGWfFd0dgRmG9zZC03gXToeyAUcFALQieYdLxuQyqkWU7UAm40Accej9ZdJLdK5W2bMuohaR6H0aDJfkw+u/p17mkLfwF5cM32VrYPP91qrJjTiPX5orXIEOQf+2J771rSMrFT/AFN5v0f/p29clE1RickEVdL/gDfXw3u10BAAA="
    },
    "Metadata": {
     "aws:cdk:path": "CdkWorkshopJava2Stack/CDKMetadata/Default"
    },
    "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Outputs": {
+  "Endpoint8024A810": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "https://",
+      {
+       "Ref": "EndpointEEF1FD8F"
+      },
+      ".execute-api.",
+      {
+       "Ref": "AWS::Region"
+      },
+      ".",
+      {
+       "Ref": "AWS::URLSuffix"
+      },
+      "/",
+      {
+       "Ref": "EndpointDeploymentStageprodB78BEEA0"
+      },
+      "/"
+     ]
+    ]
+   }
   }
  },
  "Conditions": {
