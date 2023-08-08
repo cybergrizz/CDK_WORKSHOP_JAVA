@@ -41,7 +41,7 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "834d53b5a311cecef70538dfefd23e1b8bde50f50e84e8d35a37ee97d639edc5.zip"
+     "S3Key": "c0ba49db899b8154acd8f04439e632c28b1bd5c08d8b785280cb78a6a75b5c52.zip"
     },
     "Handler": "hello.handler",
     "Role": {
@@ -50,14 +50,14 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs18.x"
+    "Runtime": "nodejs14.x"
    },
    "DependsOn": [
     "HelloHandlerServiceRole11EF7C63"
    ],
    "Metadata": {
     "aws:cdk:path": "CdkWorkshopJava2Stack/HelloHandler/Resource",
-    "aws:asset:path": "asset.834d53b5a311cecef70538dfefd23e1b8bde50f50e84e8d35a37ee97d639edc5",
+    "aws:asset:path": "asset.c0ba49db899b8154acd8f04439e632c28b1bd5c08d8b785280cb78a6a75b5c52",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -202,11 +202,11 @@
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "834d53b5a311cecef70538dfefd23e1b8bde50f50e84e8d35a37ee97d639edc5.zip"
+     "S3Key": "c0ba49db899b8154acd8f04439e632c28b1bd5c08d8b785280cb78a6a75b5c52.zip"
     },
     "Environment": {
      "Variables": {
-      "DOWNSTRAM_FUNCTION_NAME": {
+      "DOWNSTREAM_FUNCTION_NAME": {
        "Ref": "HelloHandler2E4FBA4D"
       },
       "HITS_TABLE_NAME": {
@@ -221,7 +221,7 @@
       "Arn"
      ]
     },
-    "Runtime": "nodejs18.x"
+    "Runtime": "nodejs14.x"
    },
    "DependsOn": [
     "HelloHitCounterHitCounterHandlerServiceRoleDefaultPolicy1487A60A",
@@ -229,7 +229,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "CdkWorkshopJava2Stack/HelloHitCounter/HitCounterHandler/Resource",
-    "aws:asset:path": "asset.834d53b5a311cecef70538dfefd23e1b8bde50f50e84e8d35a37ee97d639edc5",
+    "aws:asset:path": "asset.c0ba49db899b8154acd8f04439e632c28b1bd5c08d8b785280cb78a6a75b5c52",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -243,7 +243,7 @@
     "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Resource"
    }
   },
-  "EndpointDeployment318525DAc22ba219fc5b08a66639f7b550b15cef": {
+  "EndpointDeployment318525DA9aa786711ab805e381f44f4ae191b2fb": {
    "Type": "AWS::ApiGateway::Deployment",
    "Properties": {
     "Description": "Automatically created by the RestApi construct",
@@ -264,7 +264,7 @@
    "Type": "AWS::ApiGateway::Stage",
    "Properties": {
     "DeploymentId": {
-     "Ref": "EndpointDeployment318525DAc22ba219fc5b08a66639f7b550b15cef"
+     "Ref": "EndpointDeployment318525DA9aa786711ab805e381f44f4ae191b2fb"
     },
     "RestApiId": {
      "Ref": "EndpointEEF1FD8F"
@@ -299,7 +299,7 @@
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "HelloHandler2E4FBA4D",
+      "HelloHitCounterHitCounterHandlerDAEA7B37",
       "Arn"
      ]
     },
@@ -343,7 +343,7 @@
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "HelloHandler2E4FBA4D",
+      "HelloHitCounterHitCounterHandlerDAEA7B37",
       "Arn"
      ]
     },
@@ -400,7 +400,7 @@
         ":lambda:path/2015-03-31/functions/",
         {
          "Fn::GetAtt": [
-          "HelloHandler2E4FBA4D",
+          "HelloHitCounterHitCounterHandlerDAEA7B37",
           "Arn"
          ]
         },
@@ -426,7 +426,7 @@
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "HelloHandler2E4FBA4D",
+      "HelloHitCounterHitCounterHandlerDAEA7B37",
       "Arn"
      ]
     },
@@ -470,7 +470,7 @@
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
      "Fn::GetAtt": [
-      "HelloHandler2E4FBA4D",
+      "HelloHitCounterHitCounterHandlerDAEA7B37",
       "Arn"
      ]
     },
@@ -527,7 +527,7 @@
         ":lambda:path/2015-03-31/functions/",
         {
          "Fn::GetAtt": [
-          "HelloHandler2E4FBA4D",
+          "HelloHitCounterHitCounterHandlerDAEA7B37",
           "Arn"
          ]
         },
@@ -548,437 +548,6 @@
    },
    "Metadata": {
     "aws:cdk:path": "CdkWorkshopJava2Stack/Endpoint/Default/ANY/Resource"
-   }
-  },
-  "ViewerHitCountRenderedServiceRoleEBFFDB20": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "lambda.amazonaws.com"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "ManagedPolicyArns": [
-     {
-      "Fn::Join": [
-       "",
-       [
-        "arn:",
-        {
-         "Ref": "AWS::Partition"
-        },
-        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-       ]
-      ]
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/Rendered/ServiceRole/Resource"
-   }
-  },
-  "ViewerHitCountRenderedServiceRoleDefaultPolicyAA970C37": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": [
-        "dynamodb:BatchGetItem",
-        "dynamodb:ConditionCheckItem",
-        "dynamodb:DescribeTable",
-        "dynamodb:GetItem",
-        "dynamodb:GetRecords",
-        "dynamodb:GetShardIterator",
-        "dynamodb:Query",
-        "dynamodb:Scan"
-       ],
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::GetAtt": [
-          "HelloHitCounterHits7AAEBF80",
-          "Arn"
-         ]
-        },
-        {
-         "Ref": "AWS::NoValue"
-        }
-       ]
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "PolicyName": "ViewerHitCountRenderedServiceRoleDefaultPolicyAA970C37",
-    "Roles": [
-     {
-      "Ref": "ViewerHitCountRenderedServiceRoleEBFFDB20"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/Rendered/ServiceRole/DefaultPolicy/Resource"
-   }
-  },
-  "ViewerHitCountRenderedF501E149": {
-   "Type": "AWS::Lambda::Function",
-   "Properties": {
-    "Code": {
-     "S3Bucket": {
-      "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
-     },
-     "S3Key": "e2d9f4c587faa240510bb9cd1c0afe3112663d6336529432a852f5e452cf6456.zip"
-    },
-    "Environment": {
-     "Variables": {
-      "TABLE_NAME": {
-       "Ref": "HelloHitCounterHits7AAEBF80"
-      },
-      "TITLE": "Hello Hits",
-      "SORT_BY": ""
-     }
-    },
-    "Handler": "index.handler",
-    "Role": {
-     "Fn::GetAtt": [
-      "ViewerHitCountRenderedServiceRoleEBFFDB20",
-      "Arn"
-     ]
-    },
-    "Runtime": "nodejs12.x"
-   },
-   "DependsOn": [
-    "ViewerHitCountRenderedServiceRoleDefaultPolicyAA970C37",
-    "ViewerHitCountRenderedServiceRoleEBFFDB20"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/Rendered/Resource",
-    "aws:asset:path": "asset.e2d9f4c587faa240510bb9cd1c0afe3112663d6336529432a852f5e452cf6456",
-    "aws:asset:is-bundled": false,
-    "aws:asset:property": "Code"
-   }
-  },
-  "ViewerHitCountViewerEndpointAB0D97D0": {
-   "Type": "AWS::ApiGateway::RestApi",
-   "Properties": {
-    "Name": "ViewerEndpoint"
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Resource"
-   }
-  },
-  "ViewerHitCountViewerEndpointDeployment04BAD31Cb3dbe720f41690f2979e1f3e6e59d568": {
-   "Type": "AWS::ApiGateway::Deployment",
-   "Properties": {
-    "Description": "Automatically created by the RestApi construct",
-    "RestApiId": {
-     "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-    }
-   },
-   "DependsOn": [
-    "ViewerHitCountViewerEndpointproxyANY141921A3",
-    "ViewerHitCountViewerEndpointproxyDBD025BC",
-    "ViewerHitCountViewerEndpointANY18DA8C3C"
-   ],
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Deployment/Resource"
-   }
-  },
-  "ViewerHitCountViewerEndpointDeploymentStageprod09A7CFD5": {
-   "Type": "AWS::ApiGateway::Stage",
-   "Properties": {
-    "DeploymentId": {
-     "Ref": "ViewerHitCountViewerEndpointDeployment04BAD31Cb3dbe720f41690f2979e1f3e6e59d568"
-    },
-    "RestApiId": {
-     "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-    },
-    "StageName": "prod"
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/DeploymentStage.prod/Resource"
-   }
-  },
-  "ViewerHitCountViewerEndpointproxyDBD025BC": {
-   "Type": "AWS::ApiGateway::Resource",
-   "Properties": {
-    "ParentId": {
-     "Fn::GetAtt": [
-      "ViewerHitCountViewerEndpointAB0D97D0",
-      "RootResourceId"
-     ]
-    },
-    "PathPart": "{proxy+}",
-    "RestApiId": {
-     "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/{proxy+}/Resource"
-   }
-  },
-  "ViewerHitCountViewerEndpointproxyANYApiPermissionCdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04ANYproxyCE103D5E": {
-   "Type": "AWS::Lambda::Permission",
-   "Properties": {
-    "Action": "lambda:InvokeFunction",
-    "FunctionName": {
-     "Fn::GetAtt": [
-      "ViewerHitCountRenderedF501E149",
-      "Arn"
-     ]
-    },
-    "Principal": "apigateway.amazonaws.com",
-    "SourceArn": {
-     "Fn::Join": [
-      "",
-      [
-       "arn:",
-       {
-        "Ref": "AWS::Partition"
-       },
-       ":execute-api:",
-       {
-        "Ref": "AWS::Region"
-       },
-       ":",
-       {
-        "Ref": "AWS::AccountId"
-       },
-       ":",
-       {
-        "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-       },
-       "/",
-       {
-        "Ref": "ViewerHitCountViewerEndpointDeploymentStageprod09A7CFD5"
-       },
-       "/*/*"
-      ]
-     ]
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/{proxy+}/ANY/ApiPermission.CdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04.ANY..{proxy+}"
-   }
-  },
-  "ViewerHitCountViewerEndpointproxyANYApiPermissionTestCdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04ANYproxy899200EA": {
-   "Type": "AWS::Lambda::Permission",
-   "Properties": {
-    "Action": "lambda:InvokeFunction",
-    "FunctionName": {
-     "Fn::GetAtt": [
-      "ViewerHitCountRenderedF501E149",
-      "Arn"
-     ]
-    },
-    "Principal": "apigateway.amazonaws.com",
-    "SourceArn": {
-     "Fn::Join": [
-      "",
-      [
-       "arn:",
-       {
-        "Ref": "AWS::Partition"
-       },
-       ":execute-api:",
-       {
-        "Ref": "AWS::Region"
-       },
-       ":",
-       {
-        "Ref": "AWS::AccountId"
-       },
-       ":",
-       {
-        "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-       },
-       "/test-invoke-stage/*/*"
-      ]
-     ]
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/{proxy+}/ANY/ApiPermission.Test.CdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04.ANY..{proxy+}"
-   }
-  },
-  "ViewerHitCountViewerEndpointproxyANY141921A3": {
-   "Type": "AWS::ApiGateway::Method",
-   "Properties": {
-    "AuthorizationType": "NONE",
-    "HttpMethod": "ANY",
-    "Integration": {
-     "IntegrationHttpMethod": "POST",
-     "Type": "AWS_PROXY",
-     "Uri": {
-      "Fn::Join": [
-       "",
-       [
-        "arn:",
-        {
-         "Ref": "AWS::Partition"
-        },
-        ":apigateway:",
-        {
-         "Ref": "AWS::Region"
-        },
-        ":lambda:path/2015-03-31/functions/",
-        {
-         "Fn::GetAtt": [
-          "ViewerHitCountRenderedF501E149",
-          "Arn"
-         ]
-        },
-        "/invocations"
-       ]
-      ]
-     }
-    },
-    "ResourceId": {
-     "Ref": "ViewerHitCountViewerEndpointproxyDBD025BC"
-    },
-    "RestApiId": {
-     "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/{proxy+}/ANY/Resource"
-   }
-  },
-  "ViewerHitCountViewerEndpointANYApiPermissionCdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04ANYD643B47D": {
-   "Type": "AWS::Lambda::Permission",
-   "Properties": {
-    "Action": "lambda:InvokeFunction",
-    "FunctionName": {
-     "Fn::GetAtt": [
-      "ViewerHitCountRenderedF501E149",
-      "Arn"
-     ]
-    },
-    "Principal": "apigateway.amazonaws.com",
-    "SourceArn": {
-     "Fn::Join": [
-      "",
-      [
-       "arn:",
-       {
-        "Ref": "AWS::Partition"
-       },
-       ":execute-api:",
-       {
-        "Ref": "AWS::Region"
-       },
-       ":",
-       {
-        "Ref": "AWS::AccountId"
-       },
-       ":",
-       {
-        "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-       },
-       "/",
-       {
-        "Ref": "ViewerHitCountViewerEndpointDeploymentStageprod09A7CFD5"
-       },
-       "/*/"
-      ]
-     ]
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/ANY/ApiPermission.CdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04.ANY.."
-   }
-  },
-  "ViewerHitCountViewerEndpointANYApiPermissionTestCdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04ANY90843ED7": {
-   "Type": "AWS::Lambda::Permission",
-   "Properties": {
-    "Action": "lambda:InvokeFunction",
-    "FunctionName": {
-     "Fn::GetAtt": [
-      "ViewerHitCountRenderedF501E149",
-      "Arn"
-     ]
-    },
-    "Principal": "apigateway.amazonaws.com",
-    "SourceArn": {
-     "Fn::Join": [
-      "",
-      [
-       "arn:",
-       {
-        "Ref": "AWS::Partition"
-       },
-       ":execute-api:",
-       {
-        "Ref": "AWS::Region"
-       },
-       ":",
-       {
-        "Ref": "AWS::AccountId"
-       },
-       ":",
-       {
-        "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-       },
-       "/test-invoke-stage/*/"
-      ]
-     ]
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/ANY/ApiPermission.Test.CdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04.ANY.."
-   }
-  },
-  "ViewerHitCountViewerEndpointANY18DA8C3C": {
-   "Type": "AWS::ApiGateway::Method",
-   "Properties": {
-    "AuthorizationType": "NONE",
-    "HttpMethod": "ANY",
-    "Integration": {
-     "IntegrationHttpMethod": "POST",
-     "Type": "AWS_PROXY",
-     "Uri": {
-      "Fn::Join": [
-       "",
-       [
-        "arn:",
-        {
-         "Ref": "AWS::Partition"
-        },
-        ":apigateway:",
-        {
-         "Ref": "AWS::Region"
-        },
-        ":lambda:path/2015-03-31/functions/",
-        {
-         "Fn::GetAtt": [
-          "ViewerHitCountRenderedF501E149",
-          "Arn"
-         ]
-        },
-        "/invocations"
-       ]
-      ]
-     }
-    },
-    "ResourceId": {
-     "Fn::GetAtt": [
-      "ViewerHitCountViewerEndpointAB0D97D0",
-      "RootResourceId"
-     ]
-    },
-    "RestApiId": {
-     "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/ANY/Resource"
    }
   },
   "CDKMetadata": {
@@ -1013,32 +582,6 @@
       "/",
       {
        "Ref": "EndpointDeploymentStageprodB78BEEA0"
-      },
-      "/"
-     ]
-    ]
-   }
-  },
-  "ViewerHitCountViewerEndpoint0F1A7AF2": {
-   "Value": {
-    "Fn::Join": [
-     "",
-     [
-      "https://",
-      {
-       "Ref": "ViewerHitCountViewerEndpointAB0D97D0"
-      },
-      ".execute-api.",
-      {
-       "Ref": "AWS::Region"
-      },
-      ".",
-      {
-       "Ref": "AWS::URLSuffix"
-      },
-      "/",
-      {
-       "Ref": "ViewerHitCountViewerEndpointDeploymentStageprod09A7CFD5"
       },
       "/"
      ]

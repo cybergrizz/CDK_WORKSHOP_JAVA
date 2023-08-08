@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/00ac37299c8754a0e208948113983fdbbefb39fe972b5617f85db9e0f66435b9.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/512b4b86b8379b7ef58e2029278fa7d731e41b64e5124d5aaa2b4cd4fb677553.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -78,7 +78,7 @@
         "/CdkWorkshopJava2Stack/Endpoint/Deployment/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "EndpointDeployment318525DAc22ba219fc5b08a66639f7b550b15cef"
+            "data": "EndpointDeployment318525DA9aa786711ab805e381f44f4ae191b2fb"
           }
         ],
         "/CdkWorkshopJava2Stack/Endpoint/DeploymentStage.prod/Resource": [
@@ -133,90 +133,6 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "EndpointANY485C938B"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/Rendered/ServiceRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountRenderedServiceRoleEBFFDB20"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/Rendered/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountRenderedServiceRoleDefaultPolicyAA970C37"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/Rendered/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountRenderedF501E149"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointAB0D97D0"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Deployment/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointDeployment04BAD31Cb3dbe720f41690f2979e1f3e6e59d568"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/DeploymentStage.prod/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointDeploymentStageprod09A7CFD5"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Endpoint": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpoint0F1A7AF2"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/{proxy+}/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointproxyDBD025BC"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/{proxy+}/ANY/ApiPermission.CdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04.ANY..{proxy+}": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointproxyANYApiPermissionCdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04ANYproxyCE103D5E"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/{proxy+}/ANY/ApiPermission.Test.CdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04.ANY..{proxy+}": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointproxyANYApiPermissionTestCdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04ANYproxy899200EA"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/{proxy+}/ANY/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointproxyANY141921A3"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/ANY/ApiPermission.CdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04.ANY..": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointANYApiPermissionCdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04ANYD643B47D"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/ANY/ApiPermission.Test.CdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04.ANY..": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointANYApiPermissionTestCdkWorkshopJava2StackViewerHitCountViewerEndpoint6416DE04ANY90843ED7"
-          }
-        ],
-        "/CdkWorkshopJava2Stack/ViewerHitCount/ViewerEndpoint/Default/ANY/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "ViewerHitCountViewerEndpointANY18DA8C3C"
           }
         ],
         "/CdkWorkshopJava2Stack/CDKMetadata/Default": [
